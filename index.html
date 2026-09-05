@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Neeral Bhalgat — UC Berkeley CS180 Project 0">
+  <meta name="description" content="Neeral Bhalgat's UC Berkeley CS180 Project 0 page on camera perspective, perspective compression, and the dolly zoom.">
+  <meta property="og:title" content="CS180 Project 0 · Neeral Bhalgat">
+  <meta property="og:description" content="Camera perspective experiments for UC Berkeley CS180: close vs. far portraits, architectural compression, and a dolly zoom.">
+  <meta property="og:type" content="website">
   <title>CS180 Project 0 · Neeral Bhalgat</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <a class="skip-link" href="#part1">Skip to project content</a>
   <main class="page-shell">
 
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Project sections">
       <a class="brand" href="#top">Neeral Bhalgat</a>
       <div class="nav-links">
         <a href="#part1">Part 1</a>
@@ -45,16 +49,21 @@
       <div class="comparison-grid">
         <figure class="comparison-card">
           <img src="./media/part1_close.jpg"
-               alt="Close-up portrait showing perspective distortion">
+               alt="Close-up portrait showing stronger facial perspective distortion"
+               width="1152"
+               height="1536">
           <figcaption>
-            <strong>Close up — distorted selfie</strong>
+            <strong>Close up: distorted selfie</strong>
             <span>Short camera-to-subject distance.</span>
           </figcaption>
         </figure>
 
         <figure class="comparison-card">
           <img src="./media/part1_far_zoomed.jpg"
-               alt="Portrait taken from farther away while zoomed in">
+               alt="Portrait taken from farther away while zoomed in to reduce distortion"
+               width="1152"
+               height="1536"
+               decoding="async">
           <figcaption>
             <strong>Farther away + zoomed in</strong>
             <span>Longer camera-to-subject distance with similar face size.</span>
@@ -90,7 +99,10 @@
       <div class="comparison-grid">
         <figure class="comparison-card">
           <img src="./media/part2_far_zoomed.jpg"
-               alt="Building photographed from farther away while zoomed in">
+               alt="Building photographed from farther away while zoomed in, making the facade look compressed"
+               width="1152"
+               height="1536"
+               decoding="async">
           <figcaption>
             <strong>Farther away + zoomed in</strong>
             <span>The building appears flatter and more compressed in depth.</span>
@@ -99,7 +111,10 @@
 
         <figure class="comparison-card">
           <img src="./media/part2_close_wide.jpg"
-               alt="Building photographed from closer up with a wider field of view">
+               alt="Building photographed from closer up with a wider field of view, exaggerating perspective depth"
+               width="1152"
+               height="1536"
+               decoding="async">
           <figcaption>
             <strong>Closer + wider view</strong>
             <span>Depth and perspective differences become more pronounced.</span>
@@ -133,7 +148,9 @@
 
       <div class="media-card">
         <img src="./media/dolly_zoom.gif"
-             alt="Animated dolly zoom of a wooden bird on a table">
+             alt="Animated dolly zoom of a wooden bird on a table"
+             width="600"
+             height="800">
         <p class="caption">
           Seven still photographs aligned and cropped into a smoothly looping animation.
         </p>
