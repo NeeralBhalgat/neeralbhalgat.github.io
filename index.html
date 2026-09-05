@@ -1,36 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Neeral Bhalgat's CS180/280A computer vision portfolio." />
-  <title>Neeral Bhalgat · CS180/280A</title>
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neeral Bhalgat — UC Berkeley CS180 Project 0">
+  <title>CS180 Project 0 · Neeral Bhalgat</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <main class="page-shell">
+
     <nav class="site-nav">
-      <a class="brand" href="./">Neeral Bhalgat</a>
-      <div class="nav-links"><span>CS180/280A · Fall 2026</span></div>
+      <a class="brand" href="#top">Neeral Bhalgat</a>
+      <div class="nav-links">
+        <a href="#part1">Part 1</a>
+        <a href="#part2">Part 2</a>
+        <a href="#part3">Part 3</a>
+      </div>
     </nav>
 
-    <header class="hero">
-      <p class="eyebrow">UC Berkeley · Fall 2026</p>
-      <h1>CS180/280A</h1>
-      <p class="subtitle">Intro to Computer Vision & Computational Photography</p>
-      <p class="lede">A portfolio of projects exploring perspective, imaging, and computational photography.</p>
+    <header class="hero" id="top">
+      <p class="eyebrow">UC Berkeley · CS180 · Fall 2026</p>
+      <h1>Project 0</h1>
+      <p class="subtitle">Becoming Friends with Your Camera</p>
+      <p class="lede">
+        Exploring how camera position and focal length change perspective,
+        apparent depth, and the relationship between a subject and its background.
+      </p>
     </header>
 
-    <section class="project-grid" aria-label="Projects">
-      <a class="project-card" href="./0/">
-        <div class="project-number">Project 0</div>
-        <h2>Becoming Friends with Your Camera</h2>
-        <p>Perspective, focal length, compression, and the dolly zoom.</p>
-        <span class="project-link">View project →</span>
-      </a>
+    <section class="section" id="part1">
+      <div class="section-header">
+        <div class="section-kicker">Part 1</div>
+        <div>
+          <h2>Selfie: The Wrong Way vs. The Right Way</h2>
+          <p>
+            The first image was taken very close to the face. For the second image,
+            I stepped several feet back and zoomed in so the face remained roughly
+            the same size in the frame.
+          </p>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <figure class="comparison-card">
+          <img src="./media/part1_close.jpg"
+               alt="Close-up portrait showing perspective distortion">
+          <figcaption>
+            <strong>Close up — distorted selfie</strong>
+            <span>Short camera-to-subject distance.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="comparison-card">
+          <img src="./media/part1_far_zoomed.jpg"
+               alt="Portrait taken from farther away while zoomed in">
+          <figcaption>
+            <strong>Farther away + zoomed in</strong>
+            <span>Longer camera-to-subject distance with similar face size.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="intuition">
+        <h3>Intuition</h3>
+        <p>
+          Perspective is controlled primarily by camera position, not by zoom itself.
+          When the camera is very close, the nose is much closer to the lens than the
+          ears and sides of the face, so those depth differences become exaggerated.
+          Moving farther away reduces the relative depth differences, and zooming in
+          simply restores the face to a similar size in the image.
+        </p>
+      </div>
     </section>
 
-    <footer>Neeral Bhalgat · UC Berkeley CS180/280A</footer>
+    <section class="section" id="part2">
+      <div class="section-header">
+        <div class="section-kicker">Part 2</div>
+        <div>
+          <h2>Architectural Perspective Compression</h2>
+          <p>
+            I first photographed the building from farther away while zooming in,
+            then moved closer and used a wider field of view while keeping the
+            building at approximately the same scale in the frame.
+          </p>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <figure class="comparison-card">
+          <img src="./media/part2_far_zoomed.jpg"
+               alt="Building photographed from farther away while zoomed in">
+          <figcaption>
+            <strong>Farther away + zoomed in</strong>
+            <span>The building appears flatter and more compressed in depth.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="comparison-card">
+          <img src="./media/part2_close_wide.jpg"
+               alt="Building photographed from closer up with a wider field of view">
+          <figcaption>
+            <strong>Closer + wider view</strong>
+            <span>Depth and perspective differences become more pronounced.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="intuition">
+        <h3>Intuition</h3>
+        <p>
+          The apparent perspective changes because the camera position changes.
+          From farther away, differences in distance between nearby and distant
+          parts of the scene are small relative to the overall camera distance,
+          so the scene looks flatter and more compressed. Moving closer increases
+          those relative distance differences, which makes depth appear stronger.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="part3">
+      <div class="section-header">
+        <div class="section-kicker">Part 3</div>
+        <div>
+          <h2>The Dolly Zoom</h2>
+          <p>
+            I moved the camera backward while zooming in, taking seven still images
+            while keeping the wooden bird approximately the same size in frame.
+          </p>
+        </div>
+      </div>
+
+      <div class="media-card">
+        <img src="./media/dolly_zoom.gif"
+             alt="Animated dolly zoom of a wooden bird on a table">
+        <p class="caption">
+          Seven still photographs aligned and cropped into a smoothly looping animation.
+        </p>
+      </div>
+
+      <div class="intuition">
+        <h3>Intuition</h3>
+        <p>
+          As the camera moves backward, perspective becomes flatter because the relative
+          distance differences between the subject and background shrink. Zooming in
+          compensates for the subject getting smaller in the frame, so the bird stays
+          roughly fixed while the background appears to stretch and compress around it.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      Neeral Bhalgat · UC Berkeley CS180 · Project 0
+    </footer>
   </main>
 </body>
 </html>
